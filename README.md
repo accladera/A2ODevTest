@@ -52,7 +52,7 @@ Make sure you have Python3 and pip installed on your system.
 * **Create a virtual environment**:
    Inside the project directory, create a virtual environment. You can name it `venv` or anything you prefer:
    ```
-   virtualenv venv
+   py -m venv venv
    ```
 
 * **Activate the virtual environment**:
