@@ -52,7 +52,7 @@ Make sure you have Python3 and pip installed on your system.
 * **Create a virtual environment**:
    Inside the project directory, create a virtual environment. You can name it `venv` or anything you prefer:
    ```
-   py -m venv venv
+   virtualenv venv
    ```
 
 * **Activate the virtual environment**:
@@ -65,6 +65,7 @@ Make sure you have Python3 and pip installed on your system.
      ```
      venv\Scripts\activate
      ```
+* Go to the `a2oDevBack/` root 
 
 * Install project dependencies by running the following command:
 
@@ -85,6 +86,22 @@ Make sure you have Python3 and pip installed on your system.
    ```
 
    The backend will be available at `http://localhost:8000`.
+
+
+## API Reference
+
+#### Process Exercise
+
+```http
+  POST /api/exercise/process/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `data` | `Json` | **Required**.|
+| `data.index` | `integer` | Problem index.  |
+| `data.input` | `string` | Problem input data |
+
 
 ### React Frontend
 
