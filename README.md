@@ -30,7 +30,7 @@ To run the project locally, follow these steps:
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/accladera/A2ODevTest.git
 ```
 
 
