@@ -1,0 +1,3 @@
+class StringSubstrings():
+    pass
+

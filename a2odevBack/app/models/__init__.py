@@ -1,0 +1,3 @@
+from .exercise_processor_strategy import ExerciseProcessorStrategy
+from .exersice_chess import ExersiceChess
+from .exercise_string import StringProblem
