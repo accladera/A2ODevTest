@@ -39,10 +39,33 @@ Clone the project
 
 Below are the steps to run both the backend and frontend.
 
+
 ### Django REST Framework Backend
 
 Make sure you have Python3 and pip installed on your system.
-* Navigate to the `a2oDevBack/` directory.
+* **Install Python3 and pip**:
+   Make sure you have Python3 and pip installed on your system. You can download and install Python from the official website if you haven't already.
+
+* **Navigate to the project directory**:
+   Go to the `a2oDevBack/` directory where your Django project is located.
+
+* **Create a virtual environment**:
+   Inside the project directory, create a virtual environment. You can name it `venv` or anything you prefer:
+   ```
+   virtualenv venv
+   ```
+
+* **Activate the virtual environment**:
+   Activate the virtual environment. The commands might vary depending on your operating system:
+   - On Unix-based systems (Linux or macOS):
+     ```
+     source venv/bin/activate
+     ```
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+
 * Install project dependencies by running the following command:
 
    ```
