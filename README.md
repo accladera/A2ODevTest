@@ -1,7 +1,6 @@
 
 # Hi, I'm Carolina! 👋
 
-
 ## Test for Web App Developers
 
 This is a project that includes both the backend and frontend. The backend is developed using Django REST Framework and the frontend using React.
@@ -23,6 +22,7 @@ Project_Name 'A2ODevTest'/
 
 - **backend/**: Contains the backend code developed in Django REST Framework.
 - **frontend/**: Contains the frontend code developed in React.
+
 ## Getting Started
 
 To run the project locally, follow these steps:
@@ -33,60 +33,70 @@ Clone the project
   git clone https://github.com/accladera/A2ODevTest.git
 ```
 
+## Prerequisites
+
+Before you begin, make sure you have Docker installed on your machine. If you haven't installed Docker yet, please follow the [official installation instructions](https://docs.docker.com/get-docker/) for your operating system.
 
 
 ## Running the Project
 
-Below are the steps to run both the backend and frontend.
+### Running React JS Frontend 
 
+To run the Docker container and access the React app, follow these steps:
 
-### Django REST Framework Backend
+* Pull the Docker image from Docker Hub by executing the following command:
 
-Make sure you have Python3 and pip installed on your system.
-* **Install Python3 and pip**:
-   Make sure you have Python3 and pip installed on your system. You can download and install Python from the official website if you haven't already.
+    ```bash
+    docker pull accladeram/a2odev
+    ```
 
-* **Navigate to the project directory**:
-   Go to the `a2oDevBack/` directory where your Django project is located.
+* Once the image is downloaded, run the container with the following command:
 
-* **Create a virtual environment**:
-   Inside the project directory, create a virtual environment. You can name it `venv` or anything you prefer:
-   ```
-   virtualenv venv
-   ```
+    ```bash
+    docker run -d -it --name frontend -p 3000:3000 accladeram/a2odev
+    ```
 
-* **Activate the virtual environment**:
-   Activate the virtual environment. The commands might vary depending on your operating system:
-   - On Unix-based systems (Linux or macOS):
-     ```
-     source venv/bin/activate
-     ```
-   - On Windows:
-     ```
-     venv\Scripts\activate
-     ```
-* Go to the `a2oDevBack/` root 
+   This command will start the container in detached mode and map port 3000 of the container to port 3000 of your host machine.
 
-* Install project dependencies by running the following command:
+* Access the React app in your web browser by navigating to the following URL:
 
-   ```
-   pip install -r requirements.txt
-   ```
+    ```
+    http://localhost:3000
+    ```
 
-* Apply database migrations by running the following command:
+   You should see the React app running inside the Docker container rendered in your web browser.
 
-   ```
-   python manage.py migrate
-   ```
+#### Stopping the Container
 
-* Start the Django development server by running the following command:
+When you're done using the React app, you can stop the Docker container with the following command:
 
-   ```
-   python manage.py runserver 8000
-   ```
+```bash
+docker stop frontend
+```
 
-   The backend will be available at `http://localhost:8000`.
+### Running Django REST Framework Backend
 
+To run the Docker container and access the Django REST API, follow these steps:
+
+* Pull the Docker image from Docker Hub by executing the following command:
+
+    ```bash
+    docker pull accladeram/a2odevback
+    ```
+
+* Once the image is downloaded, run the container with the following command:
+
+    ```bash
+    docker run -d -it --name backend -p 8000:8000 accladeram/a2odevback
+    ```
+
+   This command will start the container in detached mode and map port 8000 of the container to port 80000 of your host machine.
+
+* Access the API in your web browser by navigating to the following URL:
+
+    ```
+    http://localhost:8000
+    ```
 
 ## API Reference
 
@@ -102,46 +112,6 @@ Make sure you have Python3 and pip installed on your system.
 | `data.index` | `integer` | Problem index.  |
 | `data.input` | `string` | Problem input data |
 
-
-### React Frontend
-
-Make sure you have Node.js and npm installed on your system.
-* Navigate to the `a2oDev/` directory.
-* Install project dependencies by running the following command:
-
-   ```
-   npm install
-   ```
-
-* Start the React development server by running the following command:
-
-   ```
-   npm start
-   ```
-
-   The frontend will be available at `http://localhost:3000`.
-
-### Front End Web App
-
-This project is built using the following technologies:
-
-- **React:** Utilized as the primary JavaScript library for building the user interface.
-- **react-router-dom:** Employed for handling navigation within the application.
-- **Fetch API:** Used for asynchronous communication with the server, enabling AJAX requests.
-
-### Back End Web App
-
-This project is built using the following technologies:
-
-- **Django:** Utilized as the primary framework for backend development.
-- **Django Rest Framework (DRF):** Employed for building powerful and flexible RESTful APIs in Django.
-- **corsheaders** Used to enable Cross-Origin Resource Sharing (CORS) handling in Django.
-### Additional Notes
-
-Ensure you have the following installed on your machine before running the above commands:
-- Node.js version 20.11.1
-- npm version 10.2.4
-- python version python 3.9
 
 ### Feedback and Contact
 Your feedback is valuable to me. If you have any questions, suggestions, or would like to discuss this project further, feel free to reach out to me at accladera@gmail.com
